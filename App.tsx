@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import Requests from './src/pages/requests';
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Requests />
-    </View>
+    </ScrollView>
   );
 };
 

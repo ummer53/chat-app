@@ -1,20 +1,19 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import imageStyles from '../../../styles/imageStyles';
+import {StyleSheet, Text, View} from 'react-native';
+import {users} from '../../../data/users';
 import textStyles from '../../../styles/textStyles';
-
-const imageLink = require('../../../assets/pexels-chevanon-323503.jpg');
+import RequestCard from './RequestCard';
 
 export default class RequestContainer extends Component {
+  requests = users.slice(4, 8);
   render() {
     return (
       <View style={styles.requestContainer}>
         <Text style={textStyles.heading}>Requests</Text>
-        <View style={styles.requestCard}>
-          <Image
-            source={imageLink}
-            style={[imageStyles.avatarImage, styles.image]}
-          />
+        <View>
+          {this.requests.map((user, index) => (
+            <RequestCard user={user} key={index} />
+          ))}
         </View>
       </View>
     );
@@ -24,10 +23,5 @@ export default class RequestContainer extends Component {
 const styles = StyleSheet.create({
   requestContainer: {
     padding: 8,
-  },
-  requestCard: {},
-  image: {
-    height: 80,
-    width: 80,
   },
 });

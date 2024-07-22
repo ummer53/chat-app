@@ -12,9 +12,4 @@ const Requests = () => {
   );
 };
 
-// const styles = StyleSheet.create({
-//   container: {
-//     padding: 4,
-//   },
-// });
 export default Requests;

@@ -8,7 +8,9 @@ export default function RequestCard({user}: {user: any}) {
   return (
     <View style={styles.cardContainer}>
       <View style={styles.infoContainer}>
-        <Avatar user={user} />
+        <View>
+          <Avatar user={user} />
+        </View>
         <Text>
           <Text style={[textStyles.name]}>{user.name}</Text> wants to connect
           with you
@@ -42,9 +44,10 @@ const styles = StyleSheet.create({
   },
   infoContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    gap: 8,
+    width: '100%',
+    padding: 4,
   },
   buttonContainer: {
     flexDirection: 'row',

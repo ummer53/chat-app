@@ -30,6 +30,7 @@ export default function RequestCard({user}: {user: any}) {
 
 const styles = StyleSheet.create({
   cardContainer: {
+    position: 'relative',
     backgroundColor: '#EAE0F0',
     borderRadius: 10,
     borderWidth: 1,

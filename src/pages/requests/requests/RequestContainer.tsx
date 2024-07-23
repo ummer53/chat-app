@@ -44,6 +44,7 @@ export default function RequestContainer() {
 
 const styles = StyleSheet.create({
   Container: {
+    position: 'relative',
     padding: 8,
   },
   requestContainer: {

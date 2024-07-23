@@ -30,9 +30,11 @@ const SuggestionCard = ({user}: {user: any}) => {
 const styles = StyleSheet.create({
   cardContainer: {
     backgroundColor: '#EAE0F0',
+    marginBottom: 1,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#EAE0C5',
+    borderStyle: 'solid',
+    borderColor: '#AAE0CF',
     padding: 4,
     gap: 4,
     flexDirection: 'row',

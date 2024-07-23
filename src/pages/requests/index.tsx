@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
+import MainLayout from '../../components/MainLayout/MainLayout';
 import RequestContext from './RequestContext';
 import RequestContainer from './requests/RequestContainer';
 import SuggestionContainer from './suggesstions/SuggestionContainer';
@@ -9,18 +9,18 @@ const Requests = () => {
   const [viewAllSuggestions, setViewAllSuggestions] = useState<boolean>(false);
 
   return (
-    <View>
-      <RequestContext.Provider
-        value={{
-          viewAllRequests,
-          setViewAllRequests,
-          viewAllSuggestions,
-          setViewAllSuggestions,
-        }}>
+    <RequestContext.Provider
+      value={{
+        viewAllRequests,
+        setViewAllRequests,
+        viewAllSuggestions,
+        setViewAllSuggestions,
+      }}>
+      <MainLayout>
         {!viewAllSuggestions && <RequestContainer />}
         {!viewAllRequests && <SuggestionContainer />}
-      </RequestContext.Provider>
-    </View>
+      </MainLayout>
+    </RequestContext.Provider>
   );
 };
 
